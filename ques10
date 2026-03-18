@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+class Palindrome 
+{
+public:
+    int n;
+
+    inline void check() 
+    {
+        int temp = n, rev = 0;
+        while (temp != 0) {
+            rev = rev * 10 + temp % 10;
+            temp /= 10;
+        }
+        if (rev == n)
+            cout << "Palindrome";
+        else
+            cout << "Not a Palindrome";
+    }
+};
+int main() 
+{
+    Palindrome p;
+    cout << "Enter number: ";
+    cin >> p.n;
+    p.check();
+    return 0;
+}
