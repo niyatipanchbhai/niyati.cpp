@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+class Medical 
+{
+public:
+    float fee, medicine, total;
+
+    Medical(float f, float m) 
+    {
+        fee = f;
+        medicine = m;
+        total = fee + medicine;
+    }
+
+    void show() 
+    {
+        cout << "Total Medical Bill = " << total;
+    }
+};
+
+int main() 
+{
+    float f, m;
+    cout << "Enter doctor fee and medicine cost: ";
+    cin >> f >> m;
+
+    Medical obj(f, m);
+    obj.show();
+    return 0;
+}
