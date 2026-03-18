@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+class Bill 
+{
+public:
+    float units, amount;
+
+    void calculate() {
+        if (units <= 100)
+            amount = units * 1.5;
+        else
+            amount = units * 2.5;
+
+        amount = amount - (amount * 0.02);
+        cout << "Final Bill Amount = " << amount;
+    }
+};
+int main() 
+{
+    Bill b;
+    cout << "Enter units consumed: ";
+    cin >> b.units;
+    b.calculate();
+    return 0;
+}
