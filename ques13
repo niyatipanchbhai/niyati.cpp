@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+class Book 
+{
+public:
+    string name;
+    int available;
+
+    void display() 
+    {
+        cout << "Book Name: " << name << endl;
+        if (available > 0)
+            cout << "Book Available";
+        else
+            cout << "Book Not Available";
+    }
+};
+
+int main() 
+{
+    Book b;
+    cout << "Enter book name: ";
+    cin >> b.name;
+    cout << "Enter number of copies: ";
+    cin >> b.available;
+
+    b.display();
+    return 0;
+}
